@@ -1,0 +1,30 @@
+#!/bin/bash
+
+phelp(){
+echo ""
+echo -e "	\e[1mlogged\e[0m is a terminal logging utility."
+echo -e "	With colors and stuff."
+echo ""
+echo -e "	\e[4mUsage:\e[0m"
+echo -e "		logged \e[3mmessage\e[0m"
+echo -e "		logged [option] \e[3mmessage\e[0m"
+echo ""
+echo -e "	\e[4mOptions:\e[0m"
+echo -e "	-n [default]	Print \e[1;30;47m normal message \e[0m"
+echo -e "	-o		Print \e[1;42m suceess (OK) message \e[0m"
+echo -e "	-p		Print \e[1;44m progress message \e[0m"
+echo -e "	-w		Print \e[30;43m warning message \e[0m"
+echo -e "	-e		Print \e[1;41m error message  \e[0m"
+echo ""
+
+exit 1
+}
+
+if [ $# == "0" ]; then phelp; fi
+if [ $# == "1" ]; then echo -e "\e[1;30;47m $2 \e[0m"; exit; fi		#normal
+if [ $1 == '-n' ]; then echo -e "\e[1;30;47m $2 \e[0m"; exit; fi	#normal
+if [ $1 == '-e' ]; then echo -e "\e[1;41m $2 \e[0m"; exit; fi		#error
+if [ $1 == '-p' ]; then echo -e "\e[1;44m $2 \e[0m"; exit; fi		#progress
+if [ $1 == '-o' ]; then echo -e "\e[1;42m $2 \e[0m"; exit; fi		#ok
+if [ $1 == '-w' ]; then echo -e "\e[30;43m $2 \e[0m"; exit; fi		#warning
+phelp
