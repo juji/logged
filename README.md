@@ -12,5 +12,5 @@ $ sudo chmod +x /usr/bin/logged
 
 ###do stuff
 ```bash
-logged -p "i am blue"
+$ logged -p "i am blue"
 ```
