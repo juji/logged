@@ -3,7 +3,7 @@
 phelp(){
 echo ""
 echo -e "	\e[1mlogged\e[0m is a terminal logging utility."
-echo -e "	With colors and stuff."
+echo -e "	It prints stuff with colored background."
 echo ""
 echo -e "	\e[4mUsage:\e[0m"
 echo -e "		logged \e[3mmessage\e[0m"
