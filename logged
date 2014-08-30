@@ -21,7 +21,7 @@ exit 1
 }
 
 if [ $# == "0" ]; then phelp; fi
-if [ $# == "1" ]; then echo -e "\e[1;30;47m $2 \e[0m"; exit; fi		#normal
+if [ $# == "1" ]; then echo -e "\e[1;30;47m $1 \e[0m"; exit; fi		#normal
 if [ $1 == '-n' ]; then echo -e "\e[1;30;47m $2 \e[0m"; exit; fi	#normal
 if [ $1 == '-e' ]; then echo -e "\e[1;41m $2 \e[0m"; exit; fi		#error
 if [ $1 == '-p' ]; then echo -e "\e[1;44m $2 \e[0m"; exit; fi		#progress
